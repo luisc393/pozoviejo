@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Centro Cultural Pozoviejo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Centro Cultural Pozoviejo, Maracaibo. Desde hace más de seis décadas acompaña a jóvenes universitarios y de bachillerato en su estudio, su carácter y su fe.">
+<meta property="og:title" content="Centro Cultural Pozoviejo">
+<meta property="og:description" content="Más de seis décadas formando jóvenes en Maracaibo.">
+<meta property="og:image" content="https://pozoviejo.org/img/edificio-1968.jpg">
+<meta property="og:locale" content="es_VE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: una sola página, columna de lectura estrecha; el ritmo de los parasoles de concreto del edificio de 1968 sirve de separador. */
+:root {
+  --hormigon: #eceae5;
+  --superficie: #f7f6f3;
+  --tinta: #1c2733;
+  --tinta-suave: #4a5561;
+  --ladrillo: #8a3e25;
+  --lago: #1f4058;
+  --linea: #cfcbc2;
+  --sobre-oscuro: #f2efe8;
+  --display: "Spectral", Georgia, "Times New Roman", serif;
+  --texto: "Source Sans 3", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --hormigon: #151b22; --superficie: #1c242d; --tinta: #e8e6e1; --tinta-suave: #a9b1ba;
+    --ladrillo: #d98a6c; --lago: #10202d; --linea: #33404c; --sobre-oscuro: #f2efe8; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --hormigon: #151b22; --superficie: #1c242d; --tinta: #e8e6e1; --tinta-suave: #a9b1ba;
+  --ladrillo: #d98a6c; --lago: #10202d; --linea: #33404c; --sobre-oscuro: #f2efe8; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--hormigon); color: var(--tinta);
+  font-family: var(--texto); font-size: 1.0625rem; line-height: 1.65;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ladrillo); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ladrillo); outline-offset: 3px; }
+.envoltura {
+  max-width: 68rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.15; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h3 { font-size: 1.3rem; }
+p { margin: 0; }
+.antetitulo {
+  font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--ladrillo);
+}
+
+/* Cabecera */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--lago); }
+.cabecera { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--lago); color: var(--sobre-oscuro); }
+.cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .8rem; flex-wrap: wrap; }
+.marca { display: flex; align-items: center; gap: .7rem; color: inherit; text-decoration: none; }
+.marca svg { flex: none; }
+.marca span { font-family: var(--display); font-size: 1.2rem; letter-spacing: .02em; }
+.menu { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; font-size: .95rem; }
+.menu a { color: var(--sobre-oscuro); text-decoration: none; opacity: .85; }
+.menu a:hover { opacity: 1; text-decoration: underline; }
+@media (max-width: 640px) { .menu { width: 100%; gap: .2rem 1rem; font-size: .9rem; } }
+
+/* Portada */
+.portada { background: var(--lago); color: var(--sobre-oscuro); }
+.portada .envoltura { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.portada h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 400; }
+.portada h1 em { font-style: italic; color: #e4b9a5; }
+.portada .bajada { font-size: 1.2rem; margin-top: 1.2rem; max-width: 34rem; color: #d9dde1; }
+.portada .antetitulo { color: #e4b9a5; margin-bottom: 1rem; display: block; }
+.portada figure { margin: 0; }
+.portada figure img { border: 1px solid rgba(255,255,255,.18); }
+.portada figcaption { font-size: .85rem; color: #b9c2ca; margin-top: .6rem; }
+.botones { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.boton { display: inline-block; padding: .7rem 1.3rem; border: 1px solid #e4b9a5; color: var(--sobre-oscuro); text-decoration: none; font-weight: 600; font-size: .95rem; }
+.boton.lleno { background: #e4b9a5; color: #1c2733; }
+@media (max-width: 820px) { .portada .envoltura { grid-template-columns: 1fr; } }
+
+/* Parasoles: separador con el ritmo de la fachada */
+.parasoles { height: 18px; background: repeating-linear-gradient(90deg, var(--linea) 0 10px, transparent 10px 34px); opacity: .9; }
+
+/* Secciones */
+section { padding-block: clamp(3rem, 7vw, 5rem); }
+.cabeza { display: grid; gap: .7rem; max-width: 42rem; margin-bottom: 2.5rem; }
+.cabeza p { color: var(--tinta-suave); font-size: 1.1rem; }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.dos > * { min-width: 0; }
+.prosa { display: grid; gap: 1.1rem; max-width: 40rem; }
+@media (max-width: 820px) { .dos { grid-template-columns: 1fr; } }
+
+.cita { font-family: var(--display); font-size: clamp(1.3rem, 2.6vw, 1.65rem); line-height: 1.4; font-style: italic; border-left: 3px solid var(--ladrillo); padding-left: 1.2rem; }
+.datos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--linea); border: 1px solid var(--linea); margin-top: 2rem; }
+.datos div { background: var(--superficie); padding: 1.1rem 1rem; }
+.datos strong { display: block; font-family: var(--display); font-size: 1.9rem; font-weight: 500; color: var(--ladrillo); font-variant-numeric: tabular-nums; }
+.datos span { font-size: .9rem; color: var(--tinta-suave); }
+@media (max-width: 520px) { .datos { grid-template-columns: 1fr; } }
+
+/* Áreas */
+.fondo-claro { background: var(--superficie); }
+.areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2rem 2.5rem; }
+.area { display: grid; gap: .5rem; align-content: start; border-top: 1px solid var(--linea); padding-top: 1.2rem; }
+.area p { color: var(--tinta-suave); }
+@media (max-width: 900px) { .areas { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .areas { grid-template-columns: 1fr; } }
+
+/* Formación cristiana */
+.franja { background: var(--lago); color: var(--sobre-oscuro); }
+.franja .antetitulo { color: #e4b9a5; }
+.franja p { color: #d9dde1; }
+.franja .cabeza p { color: #d9dde1; }
+
+/* Historia */
+.linea-tiempo { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-left: 1px solid var(--linea); }
+.linea-tiempo li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: 0 0 1.8rem 1.4rem; position: relative; }
+.linea-tiempo li::before { content: ""; position: absolute; left: -5px; top: .55rem; width: 9px; height: 9px; background: var(--ladrillo); }
+.linea-tiempo time { font-family: var(--display); font-size: 1.35rem; color: var(--ladrillo); font-variant-numeric: tabular-nums; line-height: 1.3; }
+.linea-tiempo li > div { min-width: 0; }
+.linea-tiempo h3 { font-size: 1.15rem; margin-bottom: .3rem; }
+.linea-tiempo p { color: var(--tinta-suave); }
+@media (max-width: 520px) { .linea-tiempo li { grid-template-columns: 1fr; gap: .2rem; } }
+.archivo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+.archivo figure { margin: 0; }
+.archivo figcaption { font-size: .85rem; color: var(--tinta-suave); margin-top: .4rem; }
+@media (max-width: 700px) { .archivo { grid-template-columns: 1fr; } }
+
+/* Padres */
+.preguntas { display: grid; gap: .8rem; }
+details { border: 1px solid var(--linea); background: var(--superficie); padding: .9rem 1.1rem; }
+summary { cursor: pointer; font-weight: 600; }
+details p { margin-top: .6rem; color: var(--tinta-suave); }
+
+/* Contacto */
+.contacto { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.contacto > div { border-top: 2px solid var(--tinta); padding-top: 1rem; display: grid; gap: .3rem; align-content: start; min-width: 0; overflow-wrap: anywhere; }
+.contacto .etiqueta { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); font-weight: 600; }
+@media (max-width: 760px) { .contacto { grid-template-columns: 1fr; } }
+
+/* Pie */
+footer { background: var(--tinta); color: var(--hormigon); padding-block: 2.5rem; font-size: .92rem; }
+footer .envoltura { display: grid; gap: 1rem; }
+footer p { max-width: 48rem; opacity: .9; }
+footer a { color: inherit; }
+footer .colofon { font-size: .85rem; opacity: .7; border-top: 1px solid rgba(127,127,127,.35); padding-top: 1rem; }
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="#inicio" aria-label="Centro Cultural Pozoviejo, inicio">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <rect x="1" y="1" width="32" height="32" fill="none" stroke="#e4b9a5" stroke-width="1.5"/>
+        <rect x="7" y="8" width="3" height="18" fill="#e4b9a5"/>
+        <rect x="13.5" y="8" width="3" height="18" fill="#e4b9a5"/>
+        <rect x="20" y="8" width="3" height="18" fill="#e4b9a5"/>
+        <rect x="26.5" y="8" width="1.5" height="18" fill="#e4b9a5"/>
+      </svg>
+      <span>Pozoviejo</span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#formacion">Formación cristiana</a>
+      <a href="#historia">Historia</a>
+      <a href="#padres">Padres</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="portada">
+    <div class="envoltura">
+      <div>
+        <span class="antetitulo">Centro Cultural · Maracaibo</span>
+        <h1>Formar jóvenes <em>íntegros</em> para el Zulia y para Venezuela</h1>
+        <p class="bajada">Desde hace más de seis décadas, Pozoviejo acompaña a estudiantes universitarios y de bachillerato en su estudio, su carácter, su amistad y su fe.</p>
+        <div class="botones">
+          <a class="boton lleno" href="#actividades">Conoce lo que hacemos</a>
+          <a class="boton" href="#contacto">Visítanos</a>
+        </div>
+      </div>
+      <figure>
+        <img src="img/edificio-1968.jpg" width="1600" height="1072" alt="Fachada del edificio de Pozoviejo en construcción en 1968, con sus parasoles de concreto y muros de ladrillo.">
+        <figcaption>El edificio de Pozoviejo en 1968, a pocos meses de terminarse.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="parasoles" aria-hidden="true"></div>
+
+  <section id="quienes">
+    <div class="envoltura dos">
+      <div class="prosa">
+        <span class="antetitulo">Quiénes somos</span>
+        <h2>Un lugar para crecer, cerca de la universidad</h2>
+        <p>El Centro Cultural Pozoviejo es un espacio de formación para jóvenes de Maracaibo. Aquí estudian, conversan, hacen deporte, sirven a quienes lo necesitan y encuentran amigos con los que comparten ideales.</p>
+        <p>Nuestro propósito es complementar la educación que los jóvenes reciben en su familia, en el colegio y en la universidad. Queremos ayudar a cada uno a desarrollar sus talentos, a trabajar bien y con sentido, y a poner su preparación al servicio de los demás.</p>
+        <p>Pozoviejo es una iniciativa de la Asociación Venezolana de Fomento Cultural, una asociación civil sin fines de lucro fundada en 1958 para promover actividades educativas y culturales dirigidas a la juventud.</p>
+      </div>
+      <div>
+        <p class="cita">Más que un edificio, Pozoviejo es una tradición de amistad y de trabajo bien hecho que pasa de una generación de estudiantes a la siguiente.</p>
+        <div class="datos">
+          <div><strong>1962</strong><span>primeras actividades universitarias en Maracaibo</span></div>
+          <div><strong>1968</strong><span>se levanta la sede actual</span></div>
+          <div><strong>2</strong><span>etapas: bachillerato y universidad</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="actividades" class="fondo-claro">
+    <div class="envoltura">
+      <div class="cabeza">
+        <span class="antetitulo">Actividades</span>
+        <h2>Lo que se vive en Pozoviejo</h2>
+        <p>Las actividades se adaptan a la edad de cada grupo. Todas buscan lo mismo: que cada joven aproveche su tiempo con sentido y crezca como persona.</p>
+      </div>
+      <div class="areas">
+        <article class="area">
+          <h3>Estudio y orientación</h3>
+          <p>Salas de estudio, técnicas y hábitos de trabajo, preparación de exámenes y orientación para elegir carrera. El estudio bien hecho es el centro de la formación de un estudiante.</p>
+        </article>
+        <article class="area">
+          <h3>Formación humana</h3>
+          <p>Charlas y círculos sobre el carácter, la amistad, la responsabilidad y el uso de la libertad. Cada joven puede contar con un preceptor que lo acompaña personalmente.</p>
+        </article>
+        <article class="area">
+          <h3>Cultura</h3>
+          <p>Tertulias, cineforos, fomento de la lectura, conversaciones con profesionales y visitas culturales para conocer mejor la historia y la realidad del Zulia y de Venezuela.</p>
+        </article>
+        <article class="area">
+          <h3>Deporte</h3>
+          <p>Fútbol, básquet y otros deportes en un ambiente sano. El deporte enseña compañerismo, constancia y afán de superación.</p>
+        </article>
+        <article class="area">
+          <h3>Servicio a los demás</h3>
+          <p>Campamentos de trabajo, visitas a familias necesitadas y jornadas de ayuda en comunidades del estado Zulia. Aprender a servir es parte de formarse.</p>
+        </article>
+        <article class="area">
+          <h3>Convivencias y excursiones</h3>
+          <p>Fines de semana y temporadas de vacaciones para convivir, descansar, conocer la naturaleza y profundizar en la amistad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion" class="franja">
+    <div class="envoltura dos">
+      <div class="cabeza" style="margin-bottom:0">
+        <span class="antetitulo">Formación cristiana</span>
+        <h2>Fe y vida corriente</h2>
+        <p>La atención espiritual y las actividades de formación cristiana de Pozoviejo están confiadas a la Prelatura del Opus Dei.</p>
+      </div>
+      <div class="prosa">
+        <p>Su mensaje es sencillo: el estudio, el trabajo, la familia y la amistad pueden ser camino de encuentro con Dios. Por eso ofrecemos clases de doctrina cristiana, meditaciones, retiros espirituales y la posibilidad de conversar con un sacerdote.</p>
+        <p>La participación en estas actividades es siempre libre. Pozoviejo está abierto a todos los jóvenes que quieran formarse, con pleno respeto a la conciencia y a la libertad de cada uno y de sus familias.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia">
+    <div class="envoltura">
+      <div class="cabeza">
+        <span class="antetitulo">Historia</span>
+        <h2>Una historia que comenzó con los universitarios del Zulia</h2>
+        <p>Pozoviejo nació del empeño de profesores, profesionales y familias zulianas que querían ofrecer a los estudiantes un lugar de formación junto a la universidad.</p>
+      </div>
+      <div class="dos">
+        <ol class="linea-tiempo">
+          <li><time>1958</time><div><h3>Nace la Asociación</h3><p>Se constituye en Caracas la Asociación Venezolana de Fomento Cultural, dedicada a promover actividades educativas y culturales para la juventud.</p></div></li>
+          <li><time>1962</time><div><h3>Residencia Universitaria Sinamaica</h3><p>En la avenida Baralt de Maracaibo comienzan los cursos para universitarios: técnicas de estudio, orientación profesional, ética profesional y formación cristiana.</p></div></li>
+          <li><time>1966</time><div><h3>Un comité de zulianos</h3><p>Profesores de la Universidad del Zulia y profesionales de la ciudad forman un comité promotor para dar a la labor una sede propia.</p></div></li>
+          <li><time>1967</time><div><h3>El terreno y las obras</h3><p>La Fundación Shell de Venezuela dona un terreno cerca de la Ciudad Universitaria. En noviembre comienzan las obras, sostenidas por el aporte de empresas y familias del Zulia.</p></div></li>
+          <li><time>1968</time><div><h3>Se levanta Pozoviejo</h3><p>Concluye la primera etapa: biblioteca, salas de estudio, aulas, oratorio y canchas deportivas.</p></div></li>
+          <li><time>Hoy</time><div><h3>Nuevas generaciones</h3><p>Miles de jóvenes han pasado por Pozoviejo. Muchos de ellos son hoy profesionales y padres de familia en el Zulia y en toda Venezuela.</p></div></li>
+        </ol>
+        <div class="prosa">
+          <h3>Un edificio de su tiempo</h3>
+          <p>El edificio, de concreto y ladrillo, se diseñó con grandes parasoles verticales para proteger del sol de Maracaibo las salas de estudio. Sus líneas siguen siendo la imagen de Pozoviejo.</p>
+          <p>La obra se llevó adelante gracias a la generosidad de la sociedad zuliana: empresas, comercios y familias aportaron dinero y materiales de construcción.</p>
+        </div>
+      </div>
+      <div class="archivo">
+        <figure><img src="img/obras-1968.jpg" width="1600" height="1070" loading="lazy" alt="Vista lateral del edificio en obra, con trabajadores y escaleras, en 1968."><figcaption>Obras de la primera etapa, 1968.</figcaption></figure>
+        <figure><img src="img/fachada-1968.jpg" width="1600" height="1074" loading="lazy" alt="Fachada de ladrillo con parasoles, vista desde el terreno en obra."><figcaption>Fachada principal en construcción.</figcaption></figure>
+        <figure><img src="img/galeria-1968.jpg" width="1600" height="1080" loading="lazy" alt="Galería techada con columnas de concreto, en obra."><figcaption>La galería de acceso.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="padres" class="fondo-claro">
+    <div class="envoltura dos">
+      <div class="cabeza">
+        <span class="antetitulo">Para los padres</span>
+        <h2>Trabajamos de la mano con las familias</h2>
+        <p>Los padres son los primeros educadores de sus hijos. Pozoviejo quiere ayudarles y mantenerse en contacto con ellos.</p>
+      </div>
+      <div class="preguntas">
+        <details open>
+          <summary>¿Quiénes pueden participar?</summary>
+          <p>Jóvenes varones de bachillerato y estudiantes universitarios. Las actividades se organizan por edades.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se inscribe mi hijo?</summary>
+          <p>Lo mejor es visitarnos y conversar con el director. Te explicaremos las actividades del año y cómo puede participar.</p>
+        </details>
+        <details>
+          <summary>¿Hay que ser católico para asistir?</summary>
+          <p>No. Pozoviejo está abierto a todos. La formación cristiana se ofrece con libertad y respeto a la conciencia de cada uno.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se sostiene el centro?</summary>
+          <p>Con el aporte de las familias y de amigos y cooperadores que creen en la formación de los jóvenes.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="envoltura">
+      <div class="cabeza">
+        <span class="antetitulo">Contacto</span>
+        <h2>Visítanos</h2>
+        <p>Las puertas de Pozoviejo están abiertas. Escríbenos y con gusto te atendemos.</p>
+      </div>
+      <div class="contacto">
+        <div>
+          <span class="etiqueta">Dirección</span>
+          <p>Avenida Universidad (calle 61), junto al Círculo Militar<br>Parroquia Coquivacoa, Maracaibo, estado Zulia</p>
+        </div>
+        <div>
+          <span class="etiqueta">Instagram</span>
+          <p><a href="https://www.instagram.com/pozoviejocc/" rel="noopener">@pozoviejocc</a></p>
+        </div>
+        <div>
+          <span class="etiqueta">Correo</span>
+          <p>contacto@pozoviejo.org</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <p><strong>Centro Cultural Pozoviejo</strong> · Maracaibo, Venezuela</p>
+    <p>Iniciativa de la Asociación Venezolana de Fomento Cultural. La atención espiritual y la formación cristiana están confiadas a la Prelatura del Opus Dei.</p>
+    <p class="colofon">Edición digital y desarrollo al cuidado de <a href="https://casacapriles.com">Casa Capriles</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
