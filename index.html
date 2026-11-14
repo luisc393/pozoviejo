@@ -119,6 +119,16 @@ section { padding-block: clamp(3rem, 7vw, 5rem); }
 @media (max-width: 900px) { .areas { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .areas { grid-template-columns: 1fr; } }
 
+
+.hoy { margin-top: 3.5rem; border-top: 1px solid var(--linea); padding-top: 2.5rem; }
+.hoy .cabeza { margin-bottom: 1.5rem; }
+.subtitulo { font-size: clamp(1.5rem, 3vw, 1.9rem); }
+.iniciativas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; }
+.iniciativas li { background: var(--hormigon); padding: 1.2rem; display: grid; gap: .4rem; align-content: start; min-width: 0; }
+.iniciativas h4 { margin: 0; font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: var(--ladrillo); }
+.iniciativas p { color: var(--tinta-suave); font-size: .97rem; }
+.nota-ig { margin-top: 1.5rem; color: var(--tinta-suave); }
+
 /* Formación cristiana */
 .franja { background: var(--lago); color: var(--sobre-oscuro); }
 .franja .antetitulo { color: #f0d9a8; }
@@ -252,6 +262,21 @@ footer .colofon { font-size: .85rem; opacity: .7; border-top: 1px solid rgba(127
           <p>Fines de semana y temporadas de vacaciones para convivir, descansar, conocer la naturaleza y profundizar en la amistad.</p>
         </article>
       </div>
+
+      <div class="hoy">
+        <div class="cabeza">
+          <span class="antetitulo">Hoy en Pozoviejo</span>
+          <h3 class="subtitulo">Iniciativas en marcha</h3>
+        </div>
+        <ul class="iniciativas">
+          <li><h4>Conferencias y foros</h4><p>Encuentros abiertos sobre temas de actualidad con especialistas, como el ciclo sobre la dignidad de la persona humana en tiempos de inteligencia artificial.</p></li>
+          <li><h4>Padres+</h4><p>Formación y encuentros para padres de familia: presentaciones de libros, charlas y conversaciones sobre la educación de los hijos.</p></li>
+          <li><h4>El Paquetazo</h4><p>Campaña anual de Navidad para reunir juguetes, alimentos y útiles deportivos para los niños del municipio Mara, junto con colegios amigos de Maracaibo.</p></li>
+          <li><h4>Voluntariado</h4><p>Visitas a los abuelos del Hogar San Vicente de Paúl y otras actividades de servicio en la ciudad.</p></li>
+          <li><h4>MiniBiblioteca y venta de libros</h4><p>Para fomentar la lectura: cualquiera puede donar un libro o encontrar buenas lecturas a buen precio.</p></li>
+        </ul>
+        <p class="nota-ig">Las fechas de cada actividad se anuncian en nuestro Instagram, <a href="https://www.instagram.com/pozoviejocc/" rel="noopener">@pozoviejocc</a>.</p>
+      </div>
     </div>
   </section>
 
@@ -283,6 +308,7 @@ footer .colofon { font-size: .85rem; opacity: .7; border-top: 1px solid rgba(127
           <li><time>1966</time><div><h3>Un comité de zulianos</h3><p>Profesores de la Universidad del Zulia y profesionales de la ciudad forman un comité promotor para dar a la labor una sede propia.</p></div></li>
           <li><time>1967</time><div><h3>El terreno y las obras</h3><p>La Fundación Shell de Venezuela dona un terreno cerca de la Ciudad Universitaria. En noviembre comienzan las obras, sostenidas por el aporte de empresas y familias del Zulia.</p></div></li>
           <li><time>1968</time><div><h3>Se levanta Pozoviejo</h3><p>Concluye la primera etapa: biblioteca, salas de estudio, aulas, oratorio y canchas deportivas.</p></div></li>
+          <li><time>2006</time><div><h3>Nace el Paquetazo</h3><p>Unos sesenta jóvenes de Pozoviejo reúnen tres toneladas de alimentos, juguetes y medicinas para familias del municipio Mara. La campaña se repite cada Navidad.</p></div></li>
           <li><time>Hoy</time><div><h3>Nuevas generaciones</h3><p>Miles de jóvenes han pasado por Pozoviejo. Muchos de ellos son hoy profesionales y padres de familia en el Zulia y en toda Venezuela.</p></div></li>
         </ol>
         <div class="prosa">
@@ -318,6 +344,10 @@ footer .colofon { font-size: .85rem; opacity: .7; border-top: 1px solid rgba(127
         <details>
           <summary>¿Hay que ser católico para asistir?</summary>
           <p>No. Pozoviejo está abierto a todos. La formación cristiana se ofrece con libertad y respeto a la conciencia de cada uno.</p>
+        </details>
+        <details>
+          <summary>¿Hay actividades para los padres?</summary>
+          <p>Sí. Con Padres+ organizamos encuentros, charlas y presentaciones de libros pensados para las familias.</p>
         </details>
         <details>
           <summary>¿Cómo se sostiene el centro?</summary>
